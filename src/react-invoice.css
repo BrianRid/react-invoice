@@ -1,0 +1,3 @@
+* {
+  box-sizing: border-box; /* permet de dire que le box model est le "bon" box model notre boite prend la taille qu'on lui donne */
+}
