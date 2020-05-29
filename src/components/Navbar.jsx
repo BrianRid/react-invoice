@@ -22,7 +22,7 @@ export function Navbar() {
           </li>
         </ul>
       </div>
-      <span className="navbar-text">Panier: { context.basket.length }</span>
+      <span className="navbar-text" data-testid="basket">Panier: { context.basket.length }</span>
     </nav>
   )
 }

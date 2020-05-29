@@ -21,7 +21,7 @@ export class ProductList extends Component {
 
       const productCards = this.props.database.map((product, index) => {
         return <div className="card" key={index}>
-          <img src={`${product.productCode.toLowerCase()}.jpg`} className="card-img-top" alt="..."></img>
+          <img src={`${product.productCode.toLowerCase()}.jpg`} className="card-img-top" alt={`${product.description}`}></img>
           <div className="card-body">
             <h5 className="card-title">{product.description}</h5>
             <p className='card-text'>{formatMoney(product.unitPrice)}</p>
