@@ -35,3 +35,13 @@ export const vouchersDatabase = [
 export function findProduct(productCode) {
   return productDatabase.find((product) => product.productCode === productCode) ?? false;
 }
+
+export function findVoucher(voucherCode) {
+   for (const voucher of vouchersDatabase) {
+     // value in permet de vérifier que la chaine tapée dans l'input match bien une des key de l'élément vouchersDatabase (fichier database.js)
+     if (voucherCode in voucher) {
+      return voucher[voucherCode];
+     }
+  }
+  return false;
+}

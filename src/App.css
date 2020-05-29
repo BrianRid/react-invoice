@@ -1,3 +1,10 @@
 .container {
   margin-top: 3rem;
 }
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  color: goldenrod;
+  letter-spacing: 0.2rem;
+}

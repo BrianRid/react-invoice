@@ -1,35 +1,38 @@
 import React, { Component } from 'react';
-import {Card} from "./ProductCard"
 
 import './ProductList.css'
 
 
 import { formatMoney } from '../utilities';
+import { AppContext } from '../AppContext'
+
 
 export class ProductList extends Component {
 
-  state = {
-    productCards: []
-  };
+  static contextType = AppContext;
 
-  componentDidMount() {
-    let productCards = this.props.database.map((product,index)=> {
-      return <Card
-                key={ index }
-                productCode = { product.productCode }
-                description= { product.description }
-                unitPrice= { formatMoney(product.unitPrice) }
-                />
-    })
 
-    this.setState({ productCards: productCards })
+  onClickAddToBasket = (event) => {
+    this.context.addToBasket(event.target.dataset.product);
   }
 
 
   render() {
+
+      const productCards = this.props.database.map((product, index) => {
+        return <div className="card" key={index}>
+          <img src={`${product.productCode.toLowerCase()}.jpg`} className="card-img-top" alt="..."></img>
+          <div className="card-body">
+            <h5 className="card-title">{product.description}</h5>
+            <p className='card-text'>{formatMoney(product.unitPrice)}</p>
+            <button className="btn btn-outline-secondary btn-sm" data-product={product.productCode} onClick={this.onClickAddToBasket}>+</button>
+          </div>
+        </div>
+      });
+
     return(
       <div className='cards-container'>
-        {this.state.productCards}
+        {productCards}
       </div>
     )
   }

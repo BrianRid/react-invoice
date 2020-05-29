@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 
+import { AppContext } from '../AppContext'
+
 export function Navbar() {
+
+  const context = useContext(AppContext);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,6 +22,7 @@ export function Navbar() {
           </li>
         </ul>
       </div>
+      <span className="navbar-text">Panier: { context.basket.length }</span>
     </nav>
   )
 }

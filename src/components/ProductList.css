@@ -3,3 +3,22 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.card {
+  width: calc(20rem - 1rem);
+  height: auto;
+  margin: 10px;
+
+}
+
+.card-text {
+  letter-spacing: 3px;
+}
+
+.card-title {
+  letter-spacing: 3px;
+}
+
+img {
+  height: 60%;
+}
