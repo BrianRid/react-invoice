@@ -1,7 +1,7 @@
 import React from 'react';
-// Composants de React Router
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-//Com
+
 import { Basket } from "./pages/Basket";
 import { Home } from './pages/Home';
 
@@ -30,7 +30,7 @@ export class App extends React.Component  {
     },
 
     clearBasket: () => {
-      //Vidage du panier (maj du state)
+
       this.setState({ basket: [] });
     },
 
@@ -41,7 +41,7 @@ export class App extends React.Component  {
 
   render(){
     return (
-      // Contexte de l'applicatio avec le panier et le taux
+
       <AppContext.Provider value={ this.state }>
         <Router>
           <header>
