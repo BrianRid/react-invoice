@@ -46,7 +46,7 @@ export class App extends React.Component  {
         <Router>
           <header>
             <Navbar />
-            <h1>Geek Shop</h1>
+            <h1>Geek Shop !</h1>
           </header>
           <Switch>
             <Route exact path="/">
