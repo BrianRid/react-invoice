@@ -41,7 +41,6 @@ export class App extends React.Component  {
 
   render(){
     return (
-
       <AppContext.Provider value={ this.state }>
         <Router>
           <header>

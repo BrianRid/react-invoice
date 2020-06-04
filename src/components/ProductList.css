@@ -1,6 +1,7 @@
 .cards-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -8,7 +9,11 @@
   width: calc(20rem - 1rem);
   height: auto;
   margin: 10px;
+  box-shadow: 7px 9px 5px 0px rgba(240, 240, 240, 1);
+}
 
+.card:hover{
+  transform: scale(1.01);
 }
 
 .card-text {
@@ -21,4 +26,18 @@
 
 img {
   height: 60%;
+}
+
+.basket-add{
+position: absolute;
+bottom: 1.2rem;
+left: 2rem;
+}
+
+.btn-success {
+  padding: 0px;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+
 }

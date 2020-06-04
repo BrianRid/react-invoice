@@ -25,7 +25,10 @@ export class ProductList extends Component {
           <div className="card-body">
             <h5 className="card-title">{product.description}</h5>
             <p className='card-text'>{formatMoney(product.unitPrice)}</p>
-            <button className="btn btn-outline-secondary btn-sm" data-product={product.productCode} onClick={this.onClickAddToBasket}>+</button>
+            <div className="d-flex">
+              <p className="basket-add"> Ajouter l'article au panier :</p>
+              <button className="btn btn-success" data-product={product.productCode} onClick={this.onClickAddToBasket}>+</button>
+            </div>
           </div>
         </div>
       });

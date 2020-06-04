@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { AppContext } from '../AppContext'
 
+import './Navbar.css'
+
 export function Navbar() {
 
   const context = useContext(AppContext);
@@ -13,16 +15,18 @@ export function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <Link to="/" className="nav-link">Accueil</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/basket" className="nav-link">Panier</Link>
-          </li>
-        </ul>
+        <div id="navbarContainer" className="container">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <Link to="/" className="nav-link">Accueil</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/basket" className="nav-link">Panier</Link>
+            </li>
+          </ul>
+          <span className="navbar-text" data-testid="basket"><i className="fas fa-shopping-basket"></i>  { context.basket.length }</span>
+        </div>
       </div>
-      <span className="navbar-text" data-testid="basket">Panier: { context.basket.length }</span>
     </nav>
   )
 }

@@ -1,3 +1,7 @@
+body {
+  background-color: #fdfdfd;
+}
+
 .container {
   margin-top: 3rem;
 }
@@ -5,6 +9,7 @@
 h1 {
   text-align: center;
   padding: 1rem;
-  color: goldenrod;
+  color:#1877ab;
   letter-spacing: 0.2rem;
+  font-family: 'Bangers',cursive;
 }
